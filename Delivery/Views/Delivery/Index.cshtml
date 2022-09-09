@@ -1,0 +1,32 @@
+﻿@model IEnumerable< EntregasModel>
+
+<table class="table table-dark table-hover">
+   <thead>
+    <tr>
+      
+      <th scope="col">N° de Entrega</th>
+      <th scope="col">Data de Entrega</th>
+     
+    </tr>
+  </thead>
+  <tbody>
+        @if(Model != null)
+        {
+
+            @foreach(var Entregas in Model)
+            {
+                       <tr>
+            
+                 <th scope="row">@Entregas.NumeroEntrega</th>
+                 <td>@Entregas.DataEntrega</td>
+                 
+                     </tr>
+                
+            }
+     
+        }
+      
+
+  </tbody>
+</table>
+
